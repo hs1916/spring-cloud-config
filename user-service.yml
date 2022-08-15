@@ -1,0 +1,22 @@
+token:
+  expiration_time: 86400000
+  secret: '{cipher}AQBhtAim3afTbO+i8NfC+xvI3Qh8Xkp7lECgU3TaIhu78RUmWAdxny5MztTFzftmEiRCTzuZ5e3QZnaAtUHZw896HBwuurLg2jEkzKEqHCWM0bk5qSZOtNtPrpnryQYa4NN+BayJ6wPyowLdM8DeGqarGCxmXM0B5YZa+WVlHX2IKIY01jWKdONsLgWH/CLGQHisv/BZkvPqPfIZA7jgCHSJh7PLs0/wtckCd/7DIzha6wiU+KE+3ohG7ATgvciGiJU9O4i6d+tZiJRgLA0oz5187pcuKnCr19SCk6UrZc7/W2TpYgZ7mKyR7KcCe5S0MgF2IJz1zNixbuxXqC/Hu4Oqs+1MohmCSgEYL7fOAk8eTEhS73w2Ls+cOx3FGE0wD2dyGBJ0YWEcMpZXQsY7NFtU'
+
+gateway:
+  ip: 172.30.1.5
+
+spring:
+  datasource:
+   hikari:
+     #    url: jdbc:h2:tcp://localhost/~/springBoot/msa/msa-userservice
+#      url: jdbc:h2:mem:testdb
+     username: sa
+     password: '{cipher}AQAe7qzTaecRVvHSFIpy/FR4Dqdnn+kFYqvZpGSUerxafr6MFUsv82FAz5sw2Ryx8mAzlwKvc5hGQuPAv+1nhjSD0PnGD2TcGq0fPRjRVxk+HyASvg57V0xfjZ6YfR2f6GsFNDYaEo5ILrxosPZiexeO5DX7xybJIjN5Ol8clLsLoGAvyZI82Fj//Ou8ciGQf8YOlwp3aHcHkJ8Lk6ImDtLxVX/fa1ZBdJgULaWQ1IpE1s/VgSTY37qK7DCgHBD+oj/z63Z1b6ygGniMeW9xCgwV02/fJ06nJIOoEfzjANMfgFleRqxHrxuyaD5nAjTKBe4qkxofwPmb7tiOomNWvOfPMPLUBFn6FO9l7CRgmV7XeJVXCnvPupfjPLGeWsADlyE='
+     driver-class-name: org.h2.Driver
+     jdbc-url: jdbc:h2:mem:testdb
+     pool-name: hikari-spring-config-jpa
+
+order_service:
+  url: http://order-service/order-service/%s/orders
+  exception:
+    orders_is_empty: User's Order is Empty.
